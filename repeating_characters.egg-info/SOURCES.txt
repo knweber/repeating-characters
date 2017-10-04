@@ -1,0 +1,8 @@
+README.md
+main.py
+repeating_characters.egg-info/PKG-INFO
+repeating_characters.egg-info/SOURCES.txt
+repeating_characters.egg-info/dependency_links.txt
+repeating_characters.egg-info/entry_points.txt
+repeating_characters.egg-info/requires.txt
+repeating_characters.egg-info/top_level.txt
