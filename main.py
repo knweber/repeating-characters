@@ -12,8 +12,13 @@
 #     print('yooooooo')
 import click
 
+# @click.group(chain=True, invoke_without_command=True)
 @click.command()
-@click.argument('file')
-def cli(file):
-    click.echo("Whaddup?")
-    click.echo('You entered {0}'.format(file))
+@click.argument('input', type=click.File('rb'))
+@click.argument('output', type=click.File('wb'))
+def cli(input, output):
+    while True:
+        chunk = input.read(1024)
+        if not chunk:
+            break
+        output.write(chunk)
