@@ -22,3 +22,11 @@ def cli(input, output):
         if not chunk:
             break
         output.write(chunk)
+
+def getFileText():
+
+def parseText():
+
+def cleanText():
+
+def countChars():
