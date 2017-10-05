@@ -9,6 +9,6 @@ setup(
     ],
     entry_points='''
         [console_scripts]
-        repeating_characters=main:main
+        repeating_characters=main:cli
     ''',
 )

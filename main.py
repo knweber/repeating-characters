@@ -39,3 +39,31 @@ def cli():
     filetext = file.read()
     char_counts(filetext)
     file.close()
+
+
+# Solution that works on repl
+def repeats(str):
+  max = 0
+  ans = ""
+  words = str.split(" ")
+
+  for word in words:
+    charCounts = dict()
+    letters = list(word.lower())
+    for l in letters:
+      charCounts[l] = int(letters.count(l))
+
+    countsPerWord = charCounts.values()
+    wordMax = 0
+    for i in countsPerWord:
+      if i > wordMax:
+        wordMax=i
+
+    if wordMax > max:
+      max = wordMax
+      ans = word
+
+  return ans
+
+
+print(repeats("O Romeo, Romeo, art thou Romeo?"))
