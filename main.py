@@ -42,25 +42,23 @@ def cli():
 
 
 # Solution that works on repl
-def repeats(str):
-  max = 0
+def repeats(sentence):
+  currMax = 0
   ans = ""
-  words = str.split(" ")
+  words = sentence.split(" ")
 
   for word in words:
     charCounts = dict()
     letters = list(word.lower())
     for l in letters:
-      charCounts[l] = int(letters.count(l))
+      if re.match("\w",l):
+        charCounts[l] = int(letters.count(l))
 
     countsPerWord = charCounts.values()
-    wordMax = 0
-    for i in countsPerWord:
-      if i > wordMax:
-        wordMax=i
+    wordMax = max(countsPerWord)
 
-    if wordMax > max:
-      max = wordMax
+    if wordMax > currMax:
+      currMax = wordMax
       ans = word
 
   return ans
