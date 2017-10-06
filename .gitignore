@@ -6,5 +6,5 @@ develop-eggs/
 eggs/
 .eggs/
 build/
-*.egg-info/
+*.egg-info
 *.egg
