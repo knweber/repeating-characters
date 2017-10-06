@@ -1,4 +1,5 @@
 import sys
+import re
 
 def char_counts(input):
     vals = []
